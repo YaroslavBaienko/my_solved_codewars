@@ -33,11 +33,11 @@ def solution3(s):
     return re.findall(".{2}", s + "_")
 
 
-result1 = solution1("sdfsdfsdf")
+result1 = solution1("sdfsjhjhdfsdf")
 print(result1)
 
-result2 = solution2("sdfsdfsdf")
+result2 = solution2("sjhjkhdfsdfsdf")
 print(result2)
 
-result3 = solution3("sdfsdfsdf")
+result3 = solution3("sdfsdfjsdf")
 print(result3)
