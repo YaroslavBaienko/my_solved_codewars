@@ -6,7 +6,7 @@
 # * 'abcdef' => ['ab', 'cd', 'ef']
 
 
-def solution(s):
+def solution1(s):
     z = []
     if len(s) % 2 == 0:
         for i in range(0, len(s), 2):
@@ -19,5 +19,10 @@ def solution(s):
         print(z)
 
 
-
-solution("sdfsd3frsdf")
+def solution2(s):
+    if len(s) <= 1:
+        if len(s) == 0:
+            return []
+        else:
+            return [s + '_']
+    return [s[0:2]] + solution2(s[2:])
