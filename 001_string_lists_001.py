@@ -39,5 +39,5 @@ print(result1)
 result2 = solution2("sjhjkhdfsdfsdf")
 print(result2)
 
-result3 = solution3("sdfsdfjsdf")
+result3 = solution3("sdfsdfpjsdf")
 print(result3)
