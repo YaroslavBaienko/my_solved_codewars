@@ -4,7 +4,7 @@
 #
 # * 'abc' =>  ['ab', 'c_']
 # * 'abcdef' => ['ab', 'cd', 'ef']
-# REGULAR EXPRESSIONSSTRINGS ALGORITHMS
+
 
 def solution(s):
     z = []
