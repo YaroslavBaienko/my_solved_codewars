@@ -4,6 +4,7 @@
 #
 # * 'abc' =>  ['ab', 'c_']
 # * 'abcdef' => ['ab', 'cd', 'ef']
+import re
 
 
 def solution1(s):
@@ -16,7 +17,7 @@ def solution1(s):
         for i in range(0, len(s), 2):
             z.append(s[i: i + 2])
         z[-1] = z[-1] + "_"
-        print(z)
+        return z
 
 
 def solution2(s):
@@ -26,3 +27,17 @@ def solution2(s):
         else:
             return [s + '_']
     return [s[0:2]] + solution2(s[2:])
+
+
+def solution3(s):
+    return re.findall(".{2}", s + "_")
+
+
+result1 = solution1("sdfsdfsdf")
+print(result1)
+
+result2 = solution2("sdfsdfsdf")
+print(result2)
+
+result3 = solution3("sdfsdfsdf")
+print(result3)
