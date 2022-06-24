@@ -24,5 +24,5 @@ while s.isdigit() == False:
     s = input("Input only string to convert into integer: ")
 else:
     result = string_to_number(s)
-    print(result)
-# if result == None:
+    print(f"Now {result} is an integer")
+
