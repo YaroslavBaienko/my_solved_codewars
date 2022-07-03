@@ -1,6 +1,6 @@
 # Python code to demonstrate naive method
 # to compute factorial
-n = input("Введи число, факториал которого следует вычесть: ")
+n = input("Введи число, факториал которого следует вычислить: ")
 n = int(n)
 fact = 1
 
