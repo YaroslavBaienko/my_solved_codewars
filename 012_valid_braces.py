@@ -10,22 +10,17 @@
 # A string of braces is considered valid if all braces are matched with the correct brace.
 # Examples
 
-# "(){}[]"   =>  True
-# "([{}])"   =>  True
-# "(}"       =>  False
-# "[(])"     =>  False
-# "[({})](]" =>  False
-
 def checkbrackets(string):
-    brackets_l = '['
-    brackets_r = ']'
-    curly_brackets_l = '{'
-    curly_brackets_r = 'r'
-    plain_brackets_l = '('
-    plain_brackets_r = ')'
-    if brackets in string or curly_brackets in string or plain_brackets in string:
-        return True
-    else:
-        return False
+    braces = {"(": ")", "[": "]", "{": "}"}
+    stack = []
+    for character in string:
+        if character in braces.keys():
+            stack.append(character)
+        else:
+            if len(stack) == 0 or braces[stack.pop()] != character:
+                return False
+    return len(stack) == 0
 
-print(checkbrackets("()]]{"))
+
+
+print(checkbrackets("()[]{}"))
