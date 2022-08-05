@@ -22,4 +22,4 @@ def find_needle(haystack):
             continue
 
 
-print(find_needle(["needle", "Bobr", "Gerda", "Linda", "Zina", "Markus", "Citrus"]))
+print(find_needle(["fsdfd", "Bobr", "Gerda", "needle", "Zina", "Markus", "Citrus"]))
