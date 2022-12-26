@@ -1,19 +1,10 @@
 def sum_of_intervals(intervals):
-    from collections import Counter
-    interval = []
-    length = 0
-    for i in range(len(intervals)):
-        for j in range(len(intervals[i])):
-            for x in range(intervals[i][j], intervals[i][j+1]):
-                interval.append(x)
-            break
+    result = set()
 
-    numbers = Counter(interval)
+    for (start, end) in intervals:
+        result.update(set(range(start, end)))
 
-    for k in numbers:
-        length += 1
-
-    return length
+    return len(result)
 
 print(sum_of_intervals( [
    [0, 20],
